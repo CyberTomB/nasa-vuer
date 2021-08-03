@@ -1,12 +1,13 @@
 <template>
-  <div>
-    <img src="" alt="">
+  <div class="container">
+    <img :src="mainImage.hdurl" alt="" class="row img-fluid">
   </div>
 </template>
 
 <script>
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import { apodService } from '../services/APODService';
+import { AppState } from "../AppState";
 
 export default {
   name: 'APODGetter',
@@ -18,9 +19,10 @@ export default {
     })
     return {
       getImage(){
-  
-      }
+      },
+      mainImage: computed(()=> AppState.image)
     }
   },
 }
 </script>
+
