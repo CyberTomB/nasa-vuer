@@ -1,14 +1,18 @@
 <template>
-  <APODGetter/>
+  <div class="container">
+    <APODGetter/>
+  <DateForm/>
+  </div>
 </template>
 
 <script>
 import APODGetter from './components/APODGetter.vue'
-
+import DateForm from './components/DateForm.vue'
 export default {
   name: 'App',
   components: {
-    APODGetter
+    APODGetter,
+    DateForm
   }
 }
 </script>
