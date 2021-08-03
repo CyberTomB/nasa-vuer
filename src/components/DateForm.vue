@@ -3,7 +3,7 @@
     <div class="col-12 text-center">
     <form @submit.prevent="getImage">
       <label for="date">Choose a Date:</label>
-    <input v-model="state.date" type="date" name="date" id="date">
+    <input v-model="state.date" type="date" name="date" id="date" min="1995-06-20" max="today">
     <button type="submit">SUBMIT</button>
     </form>
   </div>
