@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <img :src="mainImage.hdurl" alt="" class="row img-fluid">
+    <div class="row image-holder">
+      <img :src="mainImage.hdurl" alt="" class="col-12 image">
+    </div>
   </div>
 </template>
 
@@ -25,4 +27,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.image {
+  object-fit: cover;
+}
+
+.image-holder {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+</style>
 
