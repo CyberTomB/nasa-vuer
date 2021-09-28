@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <APODGetter/>
+    <APODGetter class="py-3"/>
   <DateForm/>
   </div>
 </template>

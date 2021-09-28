@@ -1,10 +1,12 @@
 <template>
-  <div class="row">
-    <div class="col-12 text-center">
+  <div class="row justify-content-center">
+    <div id="date-picker" class="text-center">
     <form @submit.prevent="getImage">
-      <label for="date">Choose a Date:</label>
-    <input v-model="state.date" type="date" name="date" id="date" min="1995-06-20" max="today">
-    <button type="submit">SUBMIT</button>
+    <div class="form-group">
+      <label for="date" class="control-label">Choose a Date: &nbsp;</label>
+    <input v-model="state.date" type="date" name="date" id="date" min="1995-06-20" max="today" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-info mx-3">SUBMIT</button>
     </form>
   </div>
   </div>
@@ -28,3 +30,6 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+</style>
