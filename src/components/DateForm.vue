@@ -22,7 +22,6 @@ export default {
     return {
       state,
       getImage(){
-        // let dateFormatted = state.date.replace(/-/g,"")
         apodService.getImage(state.date)
       }
     }

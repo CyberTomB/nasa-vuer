@@ -1,8 +1,10 @@
 <template>
-    <div class="row image-holder text-center justify-content-center">
-      <a v-if="mainImage.media_type == 'video'" type="video/webm"
+    <div class="row text-center justify-content-center">
+      <div class="col-12">
+        <a v-if="mainImage.media_type == 'video'" type="video/webm"
        :href="mainImage.url" class="py-3 text-success">I couldn't embed that image, but you can click here instead.</a>
-      <img v-else :src="mainImage.hdurl" alt="" class="col-12 image">
+        <img v-else :src="mainImage.hdurl" alt="" class="image-frame">
+      </div>
     </div>
 </template>
 
@@ -16,7 +18,6 @@ export default {
   setup(){
 
     onMounted(()=> {
-      console.log('mounted', Date)
       apodService.getImage()
     })
     return {
@@ -29,13 +30,9 @@ export default {
 </script>
 
 <style scoped>
-.image {
-  object-fit: cover;
-}
 
-.image-holder {
+.image-frame {
   max-height: 80vh;
-  overflow: auto;
 }
 
 </style>
